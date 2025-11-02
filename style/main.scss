@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+$primary-color: #2563EB;
+$secondary-color: #F97316;
+$tertiary-color: #14B8A6;
+$text-header-color: #b2b2b2;
+$radius: 20px;
+$shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+$font-main: 'Roboto', sans-serif;
+$text-main-color:black;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+}
+
+
+
+//  Let's Connect Section
+.connect {
+  margin-top: 2rem;
+  h2 {
+    display: flex;
+    justify-content: center;
+    color: $text-main-color;
+    font-family: $font-main;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      transition: transform 0.3s, box-shadow 0.3s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}
+
+// 🟠 Team Section
+.team {
+  margin-top: 2.5rem;
+
+  .company-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    color: $text-main-color;
+    font-family: $font-main;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  .card-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    width: 90px;
+    padding: 1rem 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    h4 {
+      font-size: 0.9rem;
+      color: #333;
+      margin: 0;
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: $text-main-color;
+      margin-top: 0.2rem;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .connect {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .social-links {
+      gap: 2.5rem;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .team {
+    .company-name {
+      font-size: 2rem;
+    }
+
+    .card-grid {
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .card {
+      width: 180px;
+      padding: 1.5rem;
+
+      img {
+        width: 90px;
+        height: 90px;
+      }
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
